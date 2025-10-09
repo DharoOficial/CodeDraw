@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBlocos - Programação Visual Animada</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.3.3/blockly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.3.3/blocks.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.3.3/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/9.3.3/msg/pt-br.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Code<span>Draw</span></div>
+        <div class="nav-controls">
+            <span style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Programação Visual Educativa</span>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="coding-area">
+            <div class="code-title">
+                <h2>Faça seu desenho!</h2>
+                <div class="title-center">
+                    <button onclick="loadExample('square')" class="btn btn-secondary"
+                        title="Carregar exemplo: Quadrado">
+                        🟪 Quadrado
+                    </button>
+                    <button onclick="loadExample('spiral')" class="btn btn-secondary" title="Carregar exemplo: Espiral">
+                        🌀 Espiral
+                    </button>
+                    <button onclick="loadExample('flower')" class="btn btn-secondary" title="Carregar exemplo: Flor">
+                        🌸 Flor
+                    </button>
+                </div>
+                <div class="action-buttons">
+
+
+                    <button id="loadButton" class="btn btn-secondary" title="Carregar programa">
+                        📂 Carregar
+                    </button>
+                    <button id="saveButton" class="btn btn-secondary" title="Salvar programa">
+                        💾 Salvar
+                    </button>
+                    <button id="exportButton" class="btn btn-secondary" title="Exportar desenho">
+                        🖼️ Exportar
+                    </button>
+                    <button id="runButton" class="btn btn-success" title="Executar programa">
+                        ▶️ Executar
+                    </button>
+                    <button id="stopButton" class="btn btn-danger" title="Parar execução" disabled>
+                        ⏹️ Parar
+                    </button>
+                    <button id="resetButton" class="btn btn-secondary" title="Reiniciar canvas">
+                        🔄 Limpar
+                    </button>
+                    <button id="tipsButton" class="btn btn-secondary" title="Mostrar/ocultar dicas">
+                        💡 Dicas
+                    </button>
+                    <button class="btn btn-secondary" onclick="resizeConsole(20)">🔼 Console</button>
+                    <button class="btn btn-secondary" onclick="resizeConsole(-20)">🔽 Console</button>
+                </div>
+            </div>
+
+            <div class="workspace-container">
+                <div id="blocklyDiv"></div>
+
+                <div class="visualization-area">
+                    <div class="preview-container">
+                        <div class="canvas-container">
+                            <div class="canvas-wrapper" id="canvasWrapper">
+                                <canvas id="drawCanvas" width="450" height="350"></canvas>
+                                <canvas id="turtleCanvas" width="450" height="350"></canvas>
+                            </div>
+
+                            <div class="tooltip-box" id="tooltipBox">
+                                <h4>💡 Dicas de Uso <button class="close-btn" onclick="closeTips()"
+                                        title="Fechar dicas">×</button></h4>
+                                <p><strong>Básico:</strong> Arraste blocos da esquerda para criar programas!</p>
+                                <p><strong>Movimento:</strong> Use "mover" e "girar" para controlar o personagem.</p>
+                                <p><strong>Repetição:</strong> Use loops para criar padrões interessantes.</p>
+                                <p><strong>Dica:</strong> A caneta desenha quando está abaixada (padrão).</p>
+                                <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.8;">
+                                    <strong>Atalhos:</strong> Ctrl+S (Salvar), Ctrl+R (Executar), Esc (Parar)
+                                </p>
+                            </div>
+
+                            <div class="speed-control">
+                                <span>⚡ Velocidade:</span>
+                                <input type="range" id="speedSlider" class="speed-slider" min="1" max="10" value="8">
+                                <span id="speedValue">8</span>
+                            </div>
+
+                            <div class="zoom-controls">
+                                <button class="zoom-btn" onclick="zoomIn()" title="Aumentar zoom">+</button>
+                                <button class="zoom-btn" onclick="zoomOut()" title="Diminuir zoom">−</button>
+                                <button class="zoom-btn zoom-reset" onclick="resetZoom()"
+                                    title="Resetar zoom">100%</button>
+                            </div>
+
+                            <div class="canvas-info" id="canvasInfo">
+                                <div><strong>🎯 Posição:</strong> <span id="positionInfo">X: 225, Y: 175</span></div>
+                                <div><strong>🧭 Direção:</strong> <span id="angleInfo">0°</span></div>
+                                <div><strong>✏️ Caneta:</strong> <span id="penInfo">Abaixada</span></div>
+                                <div><strong>🎨 Cor:</strong> <span id="colorInfo">#2dcc70</span></div>
+                                <div><strong>🔍 Zoom:</strong> <span id="zoomInfo">100%</span></div>
+                            </div>
+
+                            <button class="grid-toggle" id="gridToggle" onclick="toggleGrid()"
+                                title="Mostrar/ocultar grade">
+                                📐 Grade
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="console-container" id="console">
+                        <div class="console-line">🚀 <strong>Bem-vindo ao CodeDraw!</strong></div>
+                        <div class="console-line">🎯 Arraste blocos do menu à esquerda para criar seu programa</div>
+                        <div class="console-line">🎨 Veja seu desenho ficar pronto em tempo real acima!</div>
+                        <div class="console-line">💡 Use os exemplos para praticar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input oculto para carregar arquivos -->
+    <input type="file" id="fileInput" accept=".json" style="display: none">
+
+    <!-- Toolbox definition -->
+    <xml id="toolbox" style="display: none">
+        <category name="🚀 Movimento" colour="#F39C12">
+            <block type="move_forward"></block>
+            <block type="turn_direction"></block>
+            <block type="move_to"></block>
+            <block type="set_color"></block>
+            <block type="pen_up_down"></block>
+            <block type="set_speed"></block>
+        </category>
+        <category name="🎛️ Controle" colour="#9B59B6">
+            <block type="controls_repeat_ext">
+                <value name="TIMES">
+                    <shadow type="math_number">
+                        <field name="NUM">5</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="controls_if"></block>
+            <block type="controls_whileUntil"></block>
+        </category>
+        <category name="🔢 Matemática" colour="#E74C3C">
+            <block type="math_number"></block>
+            <block type="math_arithmetic"></block>
+            <block type="logic_compare"></block>
+            <block type="math_random_int">
+                <value name="FROM">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="TO">
+                    <shadow type="math_number">
+                        <field name="NUM">100</field>
+                    </shadow>
+                </value>
+            </block>
+        </category>
+        <category name="✏️ Formas" colour="#1ABC9C">
+            <block type="draw_circle"></block>
+            <block type="draw_square"></block>
+            <block type="draw_polygon"></block>
+        </category>
+        <category name="🎲 Aleatório" colour="#3498DB">
+            <block type="move_random"></block>
+            <block type="random_color"></block>
+            <block type="random_turn"></block>
+        </category>
+        <category name="⏳ Tempo" colour="#E67E22">
+            <block type="wait_seconds"></block>
+        </category>
+        <category name="💬 Mensagens" colour="#2ECC71">
+            <block type="log_message"></block>
+            <block type="show_message"></block>
+        </category>
+        <category name="📦 Variáveis" custom="VARIABLE" colour="#FF9800"></category>
+    </xml>
+
+    <script>
+        // Estado global da aplicação
+        let gameState = {
+            turtle: {
+                x: 225,
+                y: 175,
+                angle: 0,
+                color: '#2dcc70',
+                penDown: true,
+                size: 12,
+                speed: 8
+            },
+            isRunning: false,
+            shouldStop: false,
+            animationSpeed: 40, // Mais rápido
+            trails: [],
+            drawingPaths: [],
+            showGrid: false,
+            zoom: 1.0,
+            minZoom: 0.5,
+            maxZoom: 3.0
+        };
+
+        let workspace;
+        let drawCanvas, drawCtx;
+        let turtleCanvas, turtleCtx;
+
+        // Inicialização
+        function init() {
+            initBlockly();
+            initCanvas();
+            initEventListeners();
+            loadSavedWorkspace();
+            resetCanvas();
+            checkTipsVisibility();
+
+            // Carregar exemplo inicial
+            setTimeout(() => {
+                loadExample('square');
+                addConsoleLog('📝 Exemplo "Quadrado" carregado - clique em Executar!');
+            }, 1000);
+        }
+
+        function resizeConsole(delta) {
+            const consoleEl = document.getElementById('console');
+            let newHeight = consoleEl.offsetHeight + delta;
+            if (newHeight < 100) newHeight = 100; // limite mínimo
+            if (newHeight > 500) newHeight = 500; // limite máximo
+            consoleEl.style.height = newHeight + 'px';
+        }
+
+
+        function initBlockly() {
+            workspace = Blockly.inject('blocklyDiv', {
+                toolbox: document.getElementById('toolbox'),
+                scrollbars: true,
+                horizontalLayout: false,
+                toolboxPosition: 'start',
+                trashcan: true,
+                sounds: true,
+                grid: {
+                    spacing: 20,
+                    length: 3,
+                    colour: '#e0e0e0',
+                    snap: true
+                },
+                zoom: {
+                    controls: true,
+                    wheel: true,
+                    startScale: 0.9,
+                    maxScale: 3,
+                    minScale: 0.3,
+                    scaleSpeed: 1.2
+                }
+            });
+
+            defineCustomBlocks();
+
+            // Auto-salvar ao modificar workspace
+            workspace.addChangeListener(function () {
+                setTimeout(autoSave, 500);
+            });
+        }
+
+        function initCanvas() {
+            drawCanvas = document.getElementById('drawCanvas');
+            drawCtx = drawCanvas.getContext('2d');
+            turtleCanvas = document.getElementById('turtleCanvas');
+            turtleCtx = turtleCanvas.getContext('2d');
+
+            // Configurar anti-aliasing
+            drawCtx.imageSmoothingEnabled = true;
+            turtleCtx.imageSmoothingEnabled = true;
+        }
+
+        function initEventListeners() {
+            document.getElementById('runButton').addEventListener('click', runProgram);
+            document.getElementById('stopButton').addEventListener('click', stopProgram);
+            document.getElementById('resetButton').addEventListener('click', resetCanvas);
+            document.getElementById('saveButton').addEventListener('click', saveWorkspace);
+            document.getElementById('loadButton').addEventListener('click', () => {
+                document.getElementById('fileInput').click();
+            });
+            document.getElementById('exportButton').addEventListener('click', exportDrawing);
+            document.getElementById('tipsButton').addEventListener('click', toggleTips);
+
+            document.getElementById('fileInput').addEventListener('change', loadWorkspace);
+
+            const speedSlider = document.getElementById('speedSlider');
+            speedSlider.addEventListener('input', function () {
+                gameState.animationSpeed = 200 - (this.value * 18); // Mais rápido
+                gameState.turtle.speed = parseInt(this.value);
+                document.getElementById('speedValue').textContent = this.value;
+                updateCanvasInfo();
+            });
+
+            // Atalhos de teclado
+            document.addEventListener('keydown', handleKeyboard);
+
+            // Redimensionamento
+            window.addEventListener('resize', handleResize);
+        }
+
+        function handleKeyboard(e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch (e.key.toLowerCase()) {
+                    case 's':
+                        e.preventDefault();
+                        saveWorkspace();
+                        break;
+                    case 'r':
+                        e.preventDefault();
+                        if (!gameState.isRunning) {
+                            runProgram();
+                        }
+                        break;
+                    case 'd':
+                        e.preventDefault();
+                        resetCanvas();
+                        break;
+                    case 'o':
+                        e.preventDefault();
+                        document.getElementById('fileInput').click();
+                        break;
+                }
+            }
+
+            if (e.key === 'Escape' && gameState.isRunning) {
+                stopProgram();
+            }
+        }
+
+        function handleResize() {
+            setTimeout(() => {
+                drawTurtle();
+                redrawPaths();
+            }, 100);
+        }
+
+
+        // Definição de blocos customizados
+        function defineCustomBlocks() {
+            // Bloco mover para frente (agora aceita variáveis ou números)
+            Blockly.Blocks['move_forward'] = {
+                init: function () {
+                    this.appendValueInput("DISTANCE")
+                        .setCheck("Number")
+                        .appendField("🚀 mover");
+
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#F39C12');
+                    this.setTooltip('Move o personagem para frente com animação suave');
+
+                    // Número padrão (shadow block)
+                    this.getInput("DISTANCE").connection
+                        .setShadowDom(Blockly.Xml.textToDom(`
+                <shadow type="math_number">
+                    <field name="NUM">50</field>
+                </shadow>
+            `));
+                }
+            };
+
+
+
+
+            // Bloco girar
+            Blockly.Blocks['turn_direction'] = {
+                init: function () {
+                    this.appendValueInput("ANGLE")
+                        .setCheck("Number")
+                        .appendField("🔄 girar");
+
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#F39C12');
+                    this.setTooltip('Gira o personagem em graus com animação');
+
+                    // Número padrão (shadow block)
+                    this.getInput("ANGLE").connection
+                        .setShadowDom(Blockly.Xml.textToDom(`
+                <shadow type="math_number">
+                    <field name="NUM">90</field>
+                </shadow>
+            `));
+                }
+            };
+
+
+
+            // Bloco mover para posição
+            Blockly.Blocks['move_to'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("📍 ir para x:")
+                        .appendField(new Blockly.FieldNumber(225, 0, 450), "X")
+                        .appendField("y:")
+                        .appendField(new Blockly.FieldNumber(175, 0, 350), "Y");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#F39C12');
+                    this.setTooltip('Move o personagem para uma posição específica');
+                }
+            };
+
+            // Bloco mudar cor
+            Blockly.Blocks['set_color'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("🎨 mudar cor para")
+                        .appendField(new Blockly.FieldColour('#2dcc70'), "COLOR");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#F39C12');
+                    this.setTooltip('Muda a cor do personagem e do desenho');
+                }
+            };
+
+            // Bloco controlar caneta
+            Blockly.Blocks['pen_up_down'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("✏️")
+                        .appendField(new Blockly.FieldDropdown([
+                            ['levantar caneta', 'UP'],
+                            ['abaixar caneta', 'DOWN']
+                        ]), "ACTION");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#F39C12');
+                    this.setTooltip('Controla se o personagem desenha ao se mover');
+
+                }
+            };
+
+            // Bloco definir velocidade
+            Blockly.Blocks['set_speed'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("⚡ velocidade")
+                        .appendField(new Blockly.FieldNumber(5, 1, 10), "SPEED");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#F39C12');
+                    this.setTooltip('Define a velocidade de movimento do personagem');
+                }
+            };
+
+            // Bloco desenhar círculo
+            Blockly.Blocks['draw_circle'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("⭕ desenhar círculo raio")
+                        .appendField(new Blockly.FieldNumber(50, 5, 200), "RADIUS");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#1ABC9C');
+                    this.setTooltip('Desenha um círculo com o raio especificado');
+                }
+            };
+
+            // Bloco desenhar quadrado
+            Blockly.Blocks['draw_square'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("⬜ desenhar quadrado lado")
+                        .appendField(new Blockly.FieldNumber(80, 5, 300), "SIZE");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#1ABC9C');
+                    this.setTooltip('Desenha um quadrado com o tamanho especificado');
+                }
+            };
+
+            // Bloco desenhar polígono
+            Blockly.Blocks['draw_polygon'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("🔸 polígono")
+                        .appendField(new Blockly.FieldNumber(6, 3, 12), "SIDES")
+                        .appendField("lados, tamanho")
+                        .appendField(new Blockly.FieldNumber(60, 10, 200), "SIZE");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#1ABC9C');
+                    this.setTooltip('Desenha um polígono regular');
+                }
+            };
+
+            // Bloco movimento aleatório
+            Blockly.Blocks['move_random'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("🎲 mover aleatório")
+                        .appendField(new Blockly.FieldNumber(100, 10, 300), "MAX_DISTANCE")
+                        .appendField("passos");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#3498DB');
+                    this.setTooltip('Move uma distância aleatória para frente');
+                }
+            };
+
+            // Bloco cor aleatória
+            Blockly.Blocks['random_color'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("🌈 cor aleatória");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#3498DB');
+                    this.setTooltip('Muda para uma cor aleatória');
+                }
+            };
+
+            // Bloco giro aleatório
+            Blockly.Blocks['random_turn'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("🎯 girar aleatório")
+                        .appendField(new Blockly.FieldNumber(180, 10, 360), "MAX_ANGLE")
+                        .appendField("graus");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#3498DB');
+                    this.setTooltip('Gira um ângulo aleatório');
+                }
+            };
+
+            // Bloco esperar
+            Blockly.Blocks['wait_seconds'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("⏳ esperar")
+                        .appendField(new Blockly.FieldNumber(1, 0.1, 10), "SECONDS")
+                        .appendField("segundos");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#E67E22');
+                    this.setTooltip('Pausa a execução por alguns segundos');
+                }
+            };
+
+            // Bloco log
+            Blockly.Blocks['log_message'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("💬 dizer")
+                        .appendField(new Blockly.FieldTextInput('Olá!'), "MESSAGE");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#2ECC71');
+                    this.setTooltip('Exibe uma mensagem no console');
+                }
+            };
+
+            // Bloco mostrar mensagem
+            Blockly.Blocks['show_message'] = {
+                init: function () {
+                    this.appendDummyInput()
+                        .appendField("📢 mostrar")
+                        .appendField(new Blockly.FieldTextInput('Mensagem!'), "MESSAGE");
+                    this.setPreviousStatement(true, null);
+                    this.setNextStatement(true, null);
+                    this.setColour('#2ECC71');
+                    this.setTooltip('Mostra uma mensagem em popup');
+                }
+            };
+
+            // Geradores JavaScript para os blocos customizados
+            Blockly.JavaScript['move_forward'] = function (block) {
+                const distance = Blockly.JavaScript.valueToCode(block, 'DISTANCE', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+                return `await moveForward(${distance});\n`;
+            };
+
+            Blockly.JavaScript['turn_direction'] = function (block) {
+                const angle = Blockly.JavaScript.valueToCode(block, 'ANGLE', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+                return `await turnDirection(${angle});\n`;
+            };
+
+            Blockly.JavaScript['move_to'] = function (block) {
+                const x = block.getFieldValue('X');
+                const y = block.getFieldValue('Y');
+                return `await moveTo(${x}, ${y});\n`;
+            };
+
+            Blockly.JavaScript['set_color'] = function (block) {
+                const color = block.getFieldValue('COLOR');
+                return `setColor('${color}');\n`;
+            };
+
+            Blockly.JavaScript['pen_up_down'] = function (block) {
+                const action = block.getFieldValue('ACTION');
+                return `setPen('${action}');\n`;
+            };
+
+            Blockly.JavaScript['set_speed'] = function (block) {
+                const speed = block.getFieldValue('SPEED');
+                return `setSpeed(${speed});\n`;
+            };
+
+            Blockly.JavaScript['draw_circle'] = function (block) {
+                const radius = block.getFieldValue('RADIUS');
+                return `await drawCircle(${radius});\n`;
+            };
+
+            Blockly.JavaScript['draw_square'] = function (block) {
+                const size = block.getFieldValue('SIZE');
+                return `await drawSquare(${size});\n`;
+            };
+
+            Blockly.JavaScript['draw_polygon'] = function (block) {
+                const sides = block.getFieldValue('SIDES');
+                const size = block.getFieldValue('SIZE');
+                return `await drawPolygon(${sides}, ${size});\n`;
+            };
+
+            Blockly.JavaScript['move_random'] = function (block) {
+                const maxDistance = block.getFieldValue('MAX_DISTANCE');
+                return `await moveRandom(${maxDistance});\n`;
+            };
+
+            Blockly.JavaScript['random_color'] = function (block) {
+                return `randomColor();\n`;
+            };
+
+            Blockly.JavaScript['random_turn'] = function (block) {
+                const maxAngle = block.getFieldValue('MAX_ANGLE');
+                return `await randomTurn(${maxAngle});\n`;
+            };
+
+            Blockly.JavaScript['wait_seconds'] = function (block) {
+                const seconds = block.getFieldValue('SECONDS');
+                return `await wait(${seconds * 1000});\n`;
+            };
+
+            Blockly.JavaScript['log_message'] = function (block) {
+                const message = block.getFieldValue('MESSAGE');
+                return `logMessage('${message}');\n`;
+            };
+
+            Blockly.JavaScript['show_message'] = function (block) {
+                const message = block.getFieldValue('MESSAGE');
+                return `showMessage('${message}');\n`;
+            };
+        }
+
+        // Funções de execução
+        async function runProgram() {
+            if (gameState.isRunning) return;
+
+            gameState.isRunning = true;
+            gameState.shouldStop = false;
+
+            const runButton = document.getElementById('runButton');
+            const stopButton = document.getElementById('stopButton');
+
+            runButton.disabled = true;
+            stopButton.disabled = false;
+
+            try {
+                const code = Blockly.JavaScript.workspaceToCode(workspace);
+                addConsoleLog('🚀 Executando programa...');
+
+                // Função para executar código assíncrono
+                const AsyncFunction = Object.getPrototypeOf(async function () { }).constructor;
+                const func = new AsyncFunction(code);
+
+                await func();
+
+                if (!gameState.shouldStop) {
+                    addConsoleLog('✅ Programa executado com sucesso!', 'success');
+                }
+
+            } catch (error) {
+                addConsoleLog(`❌ Erro: ${error.message}`, 'error');
+                console.error('Erro na execução:', error);
+            } finally {
+                gameState.isRunning = false;
+                runButton.disabled = false;
+                stopButton.disabled = true;
+
+                if (gameState.shouldStop) {
+                    addConsoleLog('⏹️ Execução interrompida pelo usuário');
+                }
+            }
+        }
+
+        function stopProgram() {
+            gameState.shouldStop = true;
+            gameState.isRunning = false;
+
+            document.getElementById('runButton').disabled = false;
+            document.getElementById('stopButton').disabled = true;
+        }
+
+        // Funções do personagem
+        async function moveForward(distance) {
+            if (gameState.shouldStop) return;
+
+            const startX = gameState.turtle.x;
+            const startY = gameState.turtle.y;
+            const radians = gameState.turtle.angle * Math.PI / 180;
+            const endX = startX + Math.cos(radians) * distance;
+            const endY = startY + Math.sin(radians) * distance;
+
+            // Verificar limites
+            const finalX = Math.max(0, Math.min(450, endX));
+            const finalY = Math.max(0, Math.min(350, endY));
+
+            await animateMovement(startX, startY, finalX, finalY, distance);
+
+            gameState.turtle.x = finalX;
+            gameState.turtle.y = finalY;
+
+            updateCanvasInfo();
+            createSparkles();
+        }
+
+        async function turnDirection(angle) {
+            if (gameState.shouldStop) return;
+
+            const startAngle = gameState.turtle.angle;
+            const endAngle = startAngle + angle;
+
+            await animateRotation(startAngle, endAngle);
+
+            gameState.turtle.angle = endAngle % 360;
+            updateCanvasInfo();
+        }
+
+        async function moveTo(x, y) {
+            if (gameState.shouldStop) return;
+
+            const startX = gameState.turtle.x;
+            const startY = gameState.turtle.y;
+            const distance = Math.sqrt((x - startX) ** 2 + (y - startY) ** 2);
+
+            await animateMovement(startX, startY, x, y, distance);
+
+            gameState.turtle.x = x;
+            gameState.turtle.y = y;
+
+            updateCanvasInfo();
+            createSparkles();
+        }
+
+        function setColor(color) {
+            gameState.turtle.color = color;
+            updateCanvasInfo();
+            addConsoleLog(`🎨 Cor alterada para ${color}`);
+        }
+
+        function setPen(action) {
+            gameState.turtle.penDown = action === 'DOWN';
+            updateCanvasInfo();
+            addConsoleLog(`✏️ Caneta ${gameState.turtle.penDown ? 'abaixada' : 'levantada'}`);
+        }
+
+        function setSpeed(speed) {
+            gameState.turtle.speed = speed;
+            gameState.animationSpeed = 200 - (speed * 18); // Mais rápido
+            document.getElementById('speedSlider').value = speed;
+            document.getElementById('speedValue').textContent = speed;
+            updateCanvasInfo();
+        }
+
+        async function drawCircle(radius) {
+            if (gameState.shouldStop) return;
+
+            const steps = Math.max(12, Math.floor(radius / 3));
+            const angleStep = 360 / steps;
+            const sideLength = 2 * Math.PI * radius / steps;
+
+            for (let i = 0; i < steps; i++) {
+                if (gameState.shouldStop) break;
+                await moveForward(sideLength);
+                await turnDirection(angleStep);
+            }
+        }
+
+        async function drawSquare(size) {
+            if (gameState.shouldStop) return;
+
+            for (let i = 0; i < 4; i++) {
+                if (gameState.shouldStop) break;
+                await moveForward(size);
+                await turnDirection(90);
+            }
+        }
+
+        async function drawPolygon(sides, size) {
+            if (gameState.shouldStop) return;
+
+            const angle = 360 / sides;
+            for (let i = 0; i < sides; i++) {
+                if (gameState.shouldStop) break;
+                await moveForward(size);
+                await turnDirection(angle);
+            }
+        }
+
+        async function moveRandom(maxDistance) {
+            const distance = Math.random() * maxDistance;
+            await moveForward(distance);
+        }
+
+        function randomColor() {
+            const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            setColor(color);
+        }
+
+        async function randomTurn(maxAngle) {
+            const angle = (Math.random() * 2 - 1) * maxAngle;
+            await turnDirection(angle);
+        }
+
+        function wait(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function logMessage(message) {
+            addConsoleLog(`💬 ${message}`);
+        }
+
+        function showMessage(message) {
+            alert(message);
+        }
+
+        // Funções de animação
+        async function animateMovement(startX, startY, endX, endY, distance) {
+            const steps = Math.max(10, Math.floor(distance / 5));
+            const stepX = (endX - startX) / steps;
+            const stepY = (endY - startY) / steps;
+
+            for (let i = 0; i <= steps; i++) {
+                if (gameState.shouldStop) break;
+
+                const currentX = startX + stepX * i;
+                const currentY = startY + stepY * i;
+
+                // Desenhar linha se caneta estiver abaixada
+                if (gameState.turtle.penDown && i > 0) {
+                    const prevX = startX + stepX * (i - 1);
+                    const prevY = startY + stepY * (i - 1);
+                    drawLine(prevX, prevY, currentX, currentY);
+                }
+
+                gameState.turtle.x = currentX;
+                gameState.turtle.y = currentY;
+
+                drawTurtle();
+                createTrail();
+
+                await wait(gameState.animationSpeed);
+            }
+        }
+
+        async function animateRotation(startAngle, endAngle) {
+            const steps = Math.max(5, Math.abs(endAngle - startAngle) / 10);
+            const stepAngle = (endAngle - startAngle) / steps;
+
+            for (let i = 0; i <= steps; i++) {
+                if (gameState.shouldStop) break;
+
+                gameState.turtle.angle = startAngle + stepAngle * i;
+                drawTurtle();
+
+                await wait(gameState.animationSpeed / 2);
+            }
+        }
+
+        // Funções de desenho
+        function drawLine(x1, y1, x2, y2) {
+            drawCtx.beginPath();
+            drawCtx.moveTo(x1, y1);
+            drawCtx.lineTo(x2, y2);
+            drawCtx.strokeStyle = gameState.turtle.color;
+            drawCtx.lineWidth = 3;
+            drawCtx.lineCap = 'round';
+            drawCtx.stroke();
+
+            // Armazenar caminho para redraw
+            gameState.drawingPaths.push({
+                x1, y1, x2, y2,
+                color: gameState.turtle.color
+            });
+        }
+
+        function drawTurtle() {
+            turtleCtx.clearRect(0, 0, turtleCanvas.width, turtleCanvas.height);
+
+            const x = gameState.turtle.x;
+            const y = gameState.turtle.y;
+            const angle = gameState.turtle.angle;
+            const size = gameState.turtle.size;
+
+            turtleCtx.save();
+            turtleCtx.translate(x, y);
+            turtleCtx.rotate((angle - 90) * Math.PI / 180);
+
+            // Desenhar corpo da tartaruga
+            turtleCtx.fillStyle = gameState.turtle.color;
+            turtleCtx.beginPath();
+            turtleCtx.moveTo(0, -size);
+            turtleCtx.lineTo(-size / 2, size / 2);
+            turtleCtx.lineTo(size / 2, size / 2);
+            turtleCtx.closePath();
+            turtleCtx.fill();
+
+            // Desenhar borda
+            turtleCtx.strokeStyle = '#2c3e50';
+            turtleCtx.lineWidth = 2;
+            turtleCtx.stroke();
+
+            // Desenhar olhos
+            turtleCtx.fillStyle = 'white';
+            turtleCtx.beginPath();
+            turtleCtx.arc(-size / 4, -size / 3, size / 6, 0, 2 * Math.PI);
+            turtleCtx.arc(size / 4, -size / 3, size / 6, 0, 2 * Math.PI);
+            turtleCtx.fill();
+
+            turtleCtx.fillStyle = 'black';
+            turtleCtx.beginPath();
+            turtleCtx.arc(-size / 4, -size / 3, size / 10, 0, 2 * Math.PI);
+            turtleCtx.arc(size / 4, -size / 3, size / 10, 0, 2 * Math.PI);
+            turtleCtx.fill();
+
+            turtleCtx.restore();
+        }
+
+        function createTrail() {
+            const trail = document.createElement('div');
+            trail.className = 'character-trail';
+            trail.style.left = (gameState.turtle.x * gameState.zoom) + 'px';
+            trail.style.top = (gameState.turtle.y * gameState.zoom) + 'px';
+            trail.style.width = (6 * gameState.zoom) + 'px';
+            trail.style.height = (6 * gameState.zoom) + 'px';
+            trail.style.background = gameState.turtle.color;
+            trail.style.opacity = '0.5';
+
+            document.querySelector('.canvas-wrapper').appendChild(trail);
+
+            setTimeout(() => {
+                if (trail.parentNode) {
+                    trail.parentNode.removeChild(trail);
+                }
+            }, 1500);
+        }
+
+        function createSparkles() {
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = ((gameState.turtle.x + (Math.random() - 0.5) * 20) * gameState.zoom) + 'px';
+                    sparkle.style.top = ((gameState.turtle.y + (Math.random() - 0.5) * 20) * gameState.zoom) + 'px';
+                    sparkle.style.background = ['#FFD700', '#FF69B4', '#00CED1', '#FF6347'][Math.floor(Math.random() * 4)];
+
+                    document.querySelector('.canvas-wrapper').appendChild(sparkle);
+
+                    setTimeout(() => {
+                        if (sparkle.parentNode) {
+                            sparkle.parentNode.removeChild(sparkle);
+                        }
+                    }, 1000);
+                }, i * 100);
+            }
+        }
+
+        function redrawPaths() {
+            drawCtx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+            drawGrid();
+
+            gameState.drawingPaths.forEach(path => {
+                drawCtx.beginPath();
+                drawCtx.moveTo(path.x1, path.y1);
+                drawCtx.lineTo(path.x2, path.y2);
+                drawCtx.strokeStyle = path.color;
+                drawCtx.lineWidth = 3;
+                drawCtx.lineCap = 'round';
+                drawCtx.stroke();
+            });
+        }
+
+        function drawGrid() {
+            if (!gameState.showGrid) return;
+
+            drawCtx.strokeStyle = '#f0f0f0';
+            drawCtx.lineWidth = 1;
+
+            for (let x = 0; x <= 450; x += 25) {
+                drawCtx.beginPath();
+                drawCtx.moveTo(x, 0);
+                drawCtx.lineTo(x, 350);
+                drawCtx.stroke();
+            }
+
+            for (let y = 0; y <= 350; y += 25) {
+                drawCtx.beginPath();
+                drawCtx.moveTo(0, y);
+                drawCtx.lineTo(450, y);
+                drawCtx.stroke();
+            }
+        }
+
+        // Funções de interface
+        function resetCanvas() {
+            drawCtx.clearRect(0, 0, drawCanvas.width, drawCanvas.height);
+            turtleCtx.clearRect(0, 0, turtleCanvas.width, turtleCanvas.height);
+
+            gameState.turtle.x = 225;
+            gameState.turtle.y = 175;
+            gameState.turtle.angle = 0;
+            gameState.turtle.color = '#2dcc70';
+            gameState.turtle.penDown = true;
+            gameState.drawingPaths = [];
+
+            drawGrid();
+            drawTurtle();
+            updateCanvasInfo();
+
+            // Limpar rastros
+            document.querySelectorAll('.character-trail, .sparkle').forEach(el => el.remove());
+
+            addConsoleLog('🔄 Canvas reiniciado');
+        }
+
+        function updateCanvasInfo() {
+            document.getElementById('positionInfo').textContent = `X: ${Math.round(gameState.turtle.x)}, Y: ${Math.round(gameState.turtle.y)}`;
+            document.getElementById('angleInfo').textContent = `${Math.round(gameState.turtle.angle)}°`;
+            document.getElementById('penInfo').textContent = gameState.turtle.penDown ? 'Abaixada' : 'Levantada';
+            document.getElementById('colorInfo').textContent = gameState.turtle.color;
+            document.getElementById('zoomInfo').textContent = `${Math.round(gameState.zoom * 100)}%`;
+        }
+
+        // Funções de zoom
+        function zoomIn() {
+            if (gameState.zoom < gameState.maxZoom) {
+                gameState.zoom = Math.min(gameState.maxZoom, gameState.zoom + 0.2);
+                applyZoom();
+            }
+        }
+
+        function zoomOut() {
+            if (gameState.zoom > gameState.minZoom) {
+                gameState.zoom = Math.max(gameState.minZoom, gameState.zoom - 0.2);
+                applyZoom();
+            }
+        }
+
+        function resetZoom() {
+            gameState.zoom = 1.0;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            const canvasWrapper = document.getElementById('canvasWrapper');
+            canvasWrapper.style.transform = `scale(${gameState.zoom})`;
+            updateCanvasInfo();
+
+            // Limpar rastros existentes para evitar problemas de escala
+            document.querySelectorAll('.character-trail, .sparkle').forEach(el => el.remove());
+        }
+
+        function addConsoleLog(message, type = 'normal') {
+            const console = document.getElementById('console');
+            const line = document.createElement('div');
+            line.className = `console-line ${type === 'error' ? 'error-message' : type === 'success' ? 'success-message' : ''}`;
+            line.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+
+            console.appendChild(line);
+            console.scrollTop = console.scrollHeight;
+
+            // Limitar número de linhas
+            while (console.children.length > 50) {
+                console.removeChild(console.firstChild);
+            }
+        }
+
+        function toggleGrid() {
+            gameState.showGrid = !gameState.showGrid;
+            redrawPaths();
+            drawTurtle();
+
+            const button = document.getElementById('gridToggle');
+            button.textContent = gameState.showGrid ? '📐 Ocultar Grade' : '📐 Grade';
+        }
+
+        function toggleTips() {
+            const tooltipBox = document.getElementById('tooltipBox');
+            tooltipBox.classList.toggle('hidden');
+        }
+
+        function closeTips() {
+            document.getElementById('tooltipBox').classList.add('hidden');
+        }
+
+        function checkTipsVisibility() {
+            const hasSeenTips = localStorage.getItem('codeblocos_tips_seen');
+            if (hasSeenTips) {
+                document.getElementById('tooltipBox').classList.add('hidden');
+            }
+        }
+
+        // Funções de salvamento
+        function saveWorkspace() {
+            try {
+                const xml = Blockly.Xml.workspaceToDom(workspace);
+                const xmlText = Blockly.Xml.domToPrettyText(xml);
+
+                const blob = new Blob([xmlText], { type: 'application/xml' });
+                const url = URL.createObjectURL(blob);
+
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `codeblocos_${new Date().toISOString().slice(0, 10)}.xml`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+
+                URL.revokeObjectURL(url);
+
+                addConsoleLog('💾 Programa salvo com sucesso!');
+            } catch (error) {
+                addConsoleLog(`❌ Erro ao salvar: ${error.message}`, 'error');
+            }
+        }
+
+        function loadWorkspace(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const xmlText = e.target.result;
+                    const xmlDom = Blockly.Xml.textToDom(xmlText);
+
+                    workspace.clear();
+                    Blockly.Xml.domToWorkspace(xmlDom, workspace);
+
+                    addConsoleLog('📂 Programa carregado com sucesso!');
+                } catch (error) {
+                    addConsoleLog(`❌ Erro ao carregar arquivo: ${error.message}`, 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function autoSave() {
+            try {
+                const xml = Blockly.Xml.workspaceToDom(workspace);
+                const xmlText = Blockly.Xml.domToText(xml);
+                localStorage.setItem('codeblocos_autosave', xmlText);
+            } catch (error) {
+                console.warn('Erro no auto-save:', error);
+            }
+        }
+
+        function loadSavedWorkspace() {
+            try {
+                const savedXml = localStorage.getItem('codeblocos_autosave');
+                if (savedXml) {
+                    const xmlDom = Blockly.Xml.textToDom(savedXml);
+                    Blockly.Xml.domToWorkspace(xmlDom, workspace);
+                }
+            } catch (error) {
+                console.warn('Erro ao carregar workspace salvo:', error);
+            }
+        }
+
+        function exportDrawing() {
+            try {
+                const canvas = document.createElement('canvas');
+                canvas.width = drawCanvas.width;
+                canvas.height = drawCanvas.height;
+                const ctx = canvas.getContext('2d');
+
+                // Fundo branco
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Copiar desenho
+                ctx.drawImage(drawCanvas, 0, 0);
+
+                // Download
+                const link = document.createElement('a');
+                link.download = `codeblocos_desenho_${new Date().toISOString().slice(0, 10)}.png`;
+                link.href = canvas.toDataURL();
+                link.click();
+
+                addConsoleLog('🖼️ Desenho exportado com sucesso!');
+            } catch (error) {
+                addConsoleLog(`❌ Erro ao exportar: ${error.message}`, 'error');
+            }
+        }
+
+        // Exemplos pré-definidos
+        function loadExample(type) {
+            workspace.clear();
+            let xml = '';
+
+            switch (type) {
+                case 'square':
+                    xml = `<xml>
+                        <block type="set_color" x="70" y="70">
+                            <field name="COLOR">#e74c3c</field>
+                            <next>
+                                <block type="controls_repeat_ext">
+                                    <value name="TIMES">
+                                        <shadow type="math_number">
+                                            <field name="NUM">4</field>
+                                        </shadow>
+                                    </value>
+                                    <statement name="DO">
+                                        <block type="move_forward">
+                                            <field name="DISTANCE">100</field>
+                                            <next>
+                                                <block type="turn_direction">
+                                                    <field name="ANGLE">90</field>
+                                                </block>
+                                            </next>
+                                        </block>
+                                    </statement>
+                                </block>
+                            </next>
+                        </block>
+                    </xml>`;
+                    break;
+
+                case 'spiral':
+                    xml = `<xml>
+                        <block type="set_color" x="70" y="70">
+                            <field name="COLOR">#3498db</field>
+                            <next>
+                                <block type="controls_repeat_ext">
+                                    <value name="TIMES">
+                                        <shadow type="math_number">
+                                            <field name="NUM">36</field>
+                                        </shadow>
+                                    </value>
+                                    <statement name="DO">
+                                        <block type="move_forward">
+                                            <field name="DISTANCE">5</field>
+                                            <next>
+                                                <block type="turn_direction">
+                                                    <field name="ANGLE">91</field>
+                                                </block>
+                                            </next>
+                                        </block>
+                                    </statement>
+                                </block>
+                            </next>
+                        </block>
+                    </xml>`;
+                    break;
+
+                case 'flower':
+                    xml = `<xml>
+                        <block type="set_color" x="70" y="70">
+                            <field name="COLOR">#e91e63</field>
+                            <next>
+                                <block type="controls_repeat_ext">
+                                    <value name="TIMES">
+                                        <shadow type="math_number">
+                                            <field name="NUM">8</field>
+                                        </shadow>
+                                    </value>
+                                    <statement name="DO">
+                                        <block type="draw_circle">
+                                            <field name="RADIUS">30</field>
+                                            <next>
+                                                <block type="turn_direction">
+                                                    <field name="ANGLE">45</field>
+                                                </block>
+                                            </next>
+                                        </block>
+                                    </statement>
+                                    <next>
+                                        <block type="set_color">
+                                            <field name="COLOR">#4caf50</field>
+                                            <next>
+                                                <block type="turn_direction">
+                                                    <field name="ANGLE">-90</field>
+                                                    <next>
+                                                        <block type="move_forward">
+                                                            <field name="DISTANCE">60</field>
+                                                        </block>
+                                                    </next>
+                                                </block>
+                                            </next>
+                                        </block>
+                                    </next>
+                                </block>
+                            </next>
+                        </block>
+                    </xml>`;
+                    break;
+
+                default:
+                    return;
+            }
+
+            try {
+                const xmlDom = Blockly.Xml.textToDom(xml);
+                Blockly.Xml.domToWorkspace(xmlDom, workspace);
+                addConsoleLog(`📝 Exemplo "${type}" carregado!`);
+            } catch (error) {
+                addConsoleLog(`❌ Erro ao carregar exemplo: ${error.message}`, 'error');
+            }
+        }
+
+        // Inicializar aplicação quando DOM estiver pronto
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+
+</html>
