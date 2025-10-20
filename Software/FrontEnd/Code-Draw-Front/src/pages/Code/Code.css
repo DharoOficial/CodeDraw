@@ -306,8 +306,13 @@ body {
     min-width: 100px;
 }
 
+.blocklyTreeLabel{
+    color: #0a2236;
+}
+
 .grid-toggle {
     position: absolute;
+    color: #0a2236;
     bottom: 20px;
     right: 20px;
     background: rgba(255, 255, 255, 0.9);

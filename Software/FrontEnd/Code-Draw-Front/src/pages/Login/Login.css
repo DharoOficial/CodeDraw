@@ -1,0 +1,121 @@
+/* Define o corpo da página com o fundo gradiente e centraliza o conteúdo */
+.login-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #466781;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+/* Estilo para o cabeçalho/logo, inspirado na sua navbar */
+.login-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.login-header span {
+    color: #E79F07;
+}
+
+/* Container principal do formulário */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+}
+
+/* Cartão do formulário com sombra e bordas arredondadas */
+.login-form-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos dentro do cartão */
+.login-title {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #123c5e;
+}
+
+.login-subtitle {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Estilo para os inputs */
+.login-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: #E79F07;
+    box-shadow: 0 0 0 2px rgba(231, 159, 7, 0.3);
+}
+
+/* Estilo para o botão de submit, usando as cores do seu protótipo */
+.login-button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #E79F07 0%, #946604 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Mensagem de erro */
+.login-error {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 0.9rem;
+    min-height: 1.25rem; /* Garante espaço mesmo sem erro */
+    margin-top: 1rem;
+}
+
+/* Link para a página de cadastro */
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.login-link a {
+    color: #123c5e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

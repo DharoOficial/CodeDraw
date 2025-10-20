@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ErickBandeira-WAITS\\Downloads\\CodeDraw-master\\CodeDraw-master\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj": {}
+    "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ErickBandeira-WAITS\\Downloads\\CodeDraw-master\\CodeDraw-master\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj": {
+    "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ErickBandeira-WAITS\\Downloads\\CodeDraw-master\\CodeDraw-master\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
+        "projectUniqueName": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
         "projectName": "CodeDrawApi",
-        "projectPath": "C:\\Users\\ErickBandeira-WAITS\\Downloads\\CodeDraw-master\\CodeDraw-master\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
-        "packagesPath": "C:\\Users\\ErickBandeira-WAITS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ErickBandeira-WAITS\\Downloads\\CodeDraw-master\\CodeDraw-master\\Software\\API\\CodeDrawApi\\CodeDrawApi\\obj\\",
+        "projectPath": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
+        "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
+        "outputPath": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ErickBandeira-WAITS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -92,24 +98,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -118,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
