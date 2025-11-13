@@ -1,6 +1,7 @@
 ﻿using CodeDrawApi.DTOs;
 using CodeDrawApi.Models;
 using CodeDrawApi.Repositores;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeDrawApi.Controllers
@@ -20,6 +21,7 @@ namespace CodeDrawApi.Controllers
 
         // GET: api/submissions/{id}
         [HttpGet("{id}")]
+        [Authorize(Policy = "AlunoProfessorPolicy")]
         public async Task<ActionResult<SubmissionResponseDto>> GetSubmission(Guid id)
         {
             var submission = await _submissionRepository.GetByIdAsync(id);
@@ -44,6 +46,7 @@ namespace CodeDrawApi.Controllers
 
         // GET: api/tasks/{taskId}/submissions - Rota mais descritiva
         [HttpGet("/api/tasks/{taskId}/submissions")]
+        [Authorize(Policy = "AlunoProfessorPolicy")]
         public async Task<ActionResult<IEnumerable<SubmissionResponseDto>>> GetSubmissionsForTask(Guid taskId)
         {
             var submissions = await _submissionRepository.GetByTaskIdAsync(taskId);
@@ -63,6 +66,7 @@ namespace CodeDrawApi.Controllers
 
         // POST: api/submissions
         [HttpPost]
+        [Authorize(Policy = "AlunoPolicy")]
         public async Task<ActionResult<SubmissionResponseDto>> PostSubmission(CreateSubmissionDto createDto)
         {
             var submission = new SubmissionModel

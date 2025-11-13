@@ -97,6 +97,9 @@ namespace CodeDrawApi.Migrations
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
+                    b.Property<int>("Turma")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Users");

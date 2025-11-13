@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodeDrawApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9645dacbc0139d85b220892bc27dcac43eefa93f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeDrawApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeDrawApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

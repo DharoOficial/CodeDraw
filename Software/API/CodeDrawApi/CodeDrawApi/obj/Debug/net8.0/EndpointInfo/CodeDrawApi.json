@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/login": {
+    "/api/Auth/login": {
       "post": {
         "tags": [
           "Auth"
@@ -542,6 +542,90 @@
           }
         }
       }
+    },
+    "/api/Users/turma/{id}": {
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTurmaUserDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTurmaUserDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTurmaUserDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/role/{id}": {
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleUserDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleUserDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRoleUserDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -597,8 +681,7 @@
         "required": [
           "email",
           "name",
-          "password",
-          "role"
+          "password"
         ],
         "type": "object",
         "properties": {
@@ -615,9 +698,6 @@
           "password": {
             "minLength": 1,
             "type": "string"
-          },
-          "role": {
-            "$ref": "#/components/schemas/Roles"
           }
         },
         "additionalProperties": false
@@ -701,6 +781,18 @@
         },
         "additionalProperties": false
       },
+      "UpdateRoleUserDTO": {
+        "required": [
+          "role"
+        ],
+        "type": "object",
+        "properties": {
+          "role": {
+            "$ref": "#/components/schemas/Roles"
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateTaskDto": {
         "required": [
           "description",
@@ -716,6 +808,19 @@
           "description": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTurmaUserDTO": {
+        "required": [
+          "turma"
+        ],
+        "type": "object",
+        "properties": {
+          "turma": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -757,6 +862,10 @@
           },
           "role": {
             "$ref": "#/components/schemas/Roles"
+          },
+          "turma": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -765,7 +874,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "Insira 'Bearer' [espaço] e depois seu token JWT.\n\nExemplo: \"Bearer 12345abcdef\"",
+        "description": "Insira 'Bearer' [espa�o] e depois seu token JWT.\n\nExemplo: \"Bearer 12345abcdef\"",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       }

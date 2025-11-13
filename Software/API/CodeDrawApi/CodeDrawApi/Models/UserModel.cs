@@ -28,6 +28,8 @@ namespace CodeDrawApi.Models
         public string Password { get; set; }
         public Roles Role {  get; set; }
 
+        public int Turma { get; set; }
+
         public virtual ICollection<TaskModel> CreatedTasks { get; set; }
         public virtual ICollection<SubmissionModel> Submissions { get; set; }
 

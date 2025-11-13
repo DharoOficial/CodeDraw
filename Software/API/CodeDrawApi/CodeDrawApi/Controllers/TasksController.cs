@@ -13,29 +13,38 @@ namespace CodeDrawApi.Controllers
         // Alterado de ITaskRepository para a classe concreta TaskRepository
         private readonly TaskRepository _taskRepository;
 
+        private readonly UserRepository _userRepository;
         // O construtor agora recebe a classe concreta
-        public TasksController(TaskRepository taskRepository)
+        public TasksController(TaskRepository taskRepository, UserRepository userRepository)
         {
             _taskRepository = taskRepository;
+            _userRepository = userRepository;
         }
+
+
+      
 
         // GET: api/tasks
         [HttpGet]
+        [Authorize(Policy = "AlunoProfessorPolicy")]
         public async Task<ActionResult<IEnumerable<TaskResponseDto>>> GetTasks()
         {
             var tasks = await _taskRepository.GetAllAsync();
+            var teachers = await _userRepository.GetAllAsync();
             var taskDtos = tasks.Select(t => new TaskResponseDto
             {
                 Id = t.Id,
                 Title = t.Title,
                 Description = t.Description,
-                TeacherId = t.TeacherId
+                TeacherId = t.TeacherId,
+                TeacherName = teachers.FirstOrDefault(x=>x.Id == t.TeacherId)?.Name
             });
             return Ok(taskDtos);
         }
 
         // GET: api/tasks/{id}
         [HttpGet("{id}")]
+        [Authorize(Policy = "AlunoProfessorPolicy")]
         public async Task<ActionResult<TaskResponseDto>> GetTask(Guid id)
         {
             var task = await _taskRepository.GetByIdAsync(id);
@@ -85,6 +94,7 @@ namespace CodeDrawApi.Controllers
 
         // PUT: api/tasks/{id}
         [HttpPut("{id}")]
+        [Authorize(Policy = "ProfessorPolicy")]
         public async Task<IActionResult> PutTask(Guid id, UpdateTaskDto updateTaskDto)
         {
             var task = await _taskRepository.GetByIdAsync(id);
@@ -104,6 +114,7 @@ namespace CodeDrawApi.Controllers
 
         // DELETE: api/tasks/{id}
         [HttpDelete("{id}")]
+        [Authorize(Policy = "ProfessorPolicy")]
         public async Task<IActionResult> DeleteTask(Guid id)
         {
             var task = await _taskRepository.GetByIdAsync(id);

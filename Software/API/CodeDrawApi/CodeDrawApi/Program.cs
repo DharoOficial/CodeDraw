@@ -9,6 +9,19 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "DefaultCorsPolicy",
+        policy =>
+        {
+            //policy.WithOrigins("http://0.0.0.0:5173", "http://0.0.0.0:3000","http://192.168.15.75:5173")
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
+
 // Add services to the container.
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -23,6 +36,7 @@ builder.Services.AddScoped<TaskRepository>();
 builder.Services.AddScoped<SubmissionRepository>();
 builder.Services.AddScoped<TokenService>();
 var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
+
 
 builder.Services.AddAuthentication(options =>
 {
@@ -46,13 +60,14 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("AlunoPolicy", policy => policy.RequireRole("Aluno"));
-    options.AddPolicy("ProfessorPolicy", policy => policy.RequireRole("Professor"));
+    options.AddPolicy("AlunoPolicy", policy => policy.RequireRole("Aluno", "Admin"));
+    options.AddPolicy("ProfessorPolicy", policy => policy.RequireRole("Professor", "Admin"));
     options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("AlunoProfessorPolicy", policy => policy.RequireRole("Admin", "Aluno", "Professor"));
 });
 builder.Services.AddSwaggerGen(options =>
 {
-    // Adiciona a definição de segurança "Bearer" (JWT)
+    // Adiciona a definiï¿½ï¿½o de seguranï¿½a "Bearer" (JWT)
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -60,10 +75,10 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = "bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Insira 'Bearer' [espaço] e depois seu token JWT.\n\nExemplo: \"Bearer 12345abcdef\""
+        Description = "Insira 'Bearer' [espaï¿½o] e depois seu token JWT.\n\nExemplo: \"Bearer 12345abcdef\""
     });
 
-    // Exige que a autenticação seja fornecida para os endpoints
+    // Exige que a autenticaï¿½ï¿½o seja fornecida para os endpoints
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -81,6 +96,8 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -91,6 +108,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseCors("DefaultCorsPolicy");
 
 app.UseAuthorization();
 

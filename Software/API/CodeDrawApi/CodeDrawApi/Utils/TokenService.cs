@@ -30,7 +30,8 @@ namespace CodeDrawApi.Utils
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Role, user.Role.ToString()),
-                    new Claim(ClaimTypes.Name, user.Name)
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim("turma", user.Turma.ToString())
                 }),
                 // Tempo de expiração do token
                 Expires = DateTime.UtcNow.AddHours(8),
