@@ -39,6 +39,18 @@ namespace CodeDrawApi.DTOs
         public string Email { get; set; }
     }
 
+    public class UpdateTurmaUserDTO
+    {
+        [Required]
+        public int Turma { get; set; }
+    }
+
+    public class UpdateRoleUserDTO
+    {
+        [Required]
+        public Roles Role { get; set; }
+    }
+
     // DTO para retornar dados de um usuário (sem a senha).
     public class UserResponseDto
     {
@@ -46,5 +58,6 @@ namespace CodeDrawApi.DTOs
         public string Name { get; set; }
         public string Email { get; set; }
         public Roles Role { get; set; }
+        public int Turma { get; set; }
     }
 }

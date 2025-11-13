@@ -1,0 +1,66 @@
+.header-container-side {
+    background: linear-gradient(135deg, #123c5e 0%, #0a2236 100%);
+    box-shadow: 0 0 10px #333;
+    height: 100%;
+    width: 25%;
+}
+
+.header-container-side h1 {
+    text-align: center;
+    width: 100%;
+    padding-top: 2em;
+    color: #efefef;
+
+}
+
+.Header-logado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    width: 80%;
+    margin: auto;
+}
+
+.HeaderGenerate {
+    font-size: 1em;
+    color: #fff;
+}
+
+.HeaderGenerate h2 {
+    font-size: 1.5em;
+    color: #fff;
+    padding-bottom: 1em;
+}
+
+.linkHeaderH {
+    width: 90%;
+    display: inline-block;
+    margin-top: 1em;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #091e30;
+    background: linear-gradient(135deg, #b17b07 0%, #E79F07 100%);
+    padding: 0.3em 3em;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 15px -10px #fffa,
+        inset -5px -5px 15px -10px #000,
+        5px 5px 10px -10px #000;
+    transition: 0.2s ease-in-out;
+}
+
+.linkHeaderH:hover {
+    color: #091e30;
+    background: linear-gradient(135deg, #b17b07 0%, #E79F07 100%);
+    padding: 0.3em 3em;
+    border-radius: 10px;
+    box-shadow: inset 7px 7px 15px -10px #fff7,
+        inset -8px -8px 15px -10px #0007,
+        7px 7px 15px -10px #000;
+    transform: scale(1.1);
+}
+
+.NomeHeader {
+    font-size: 1.5em !important;
+    color: #fff;
+}

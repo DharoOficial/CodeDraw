@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\codedrawapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\codedrawapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\repositores\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\repositores\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\codedrawapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\codedrawapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\utils\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,60 +35,16 @@
       "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\controllers\\submissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\controllers\\submissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\dtos\\submissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\dtos\\submissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\dtos\\taskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\repositores\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\repositores\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\repositores\\submissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\repositores\\submissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\repositores\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\repositores\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\utils\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\utils\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\models\\submissionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\models\\submissionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\utils\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\utils\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\migrations\\20251008171703_fixpasswordcolumnname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\migrations\\20251008171703_fixpasswordcolumnname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\migrations\\20251008163212_initialmodelwithguids.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\migrations\\20251008163212_initialmodelwithguids.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\migrations\\20251110142430_turmaadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\migrations\\20251110142430_turmaadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,50 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CodeDrawApi",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
-              "RelativeDocumentMoniker": "CodeDrawApi\\CodeDrawApi.csproj",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
-              "RelativeToolTip": "CodeDrawApi\\CodeDrawApi.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-08T18:43:54.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "CodeDrawApi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T18:01:57.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TasksController.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\TasksController.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Controllers\\TasksController.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\TasksController.cs",
-              "RelativeToolTip": "CodeDrawApi\\Controllers\\TasksController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAmwDEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:53:28.387Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -150,75 +64,60 @@
               "RelativeDocumentMoniker": "CodeDrawApi\\Program.cs",
               "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Program.cs",
               "RelativeToolTip": "CodeDrawApi\\Program.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAIwFAAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T16:29:57.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\appsettings.json",
-              "RelativeDocumentMoniker": "CodeDrawApi\\appsettings.json",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\appsettings.json",
-              "RelativeToolTip": "CodeDrawApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-08T16:26:22.722Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CodeDrawApi.csproj",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
-              "RelativeDocumentMoniker": "CodeDrawApi\\CodeDrawApi.csproj",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\CodeDrawApi.csproj",
-              "RelativeToolTip": "CodeDrawApi\\CodeDrawApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-08T18:04:49.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "20251008171703_FixPasswordColumnName.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Migrations\\20251008171703_FixPasswordColumnName.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Migrations\\20251008171703_FixPasswordColumnName.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Migrations\\20251008171703_FixPasswordColumnName.cs",
-              "RelativeToolTip": "CodeDrawApi\\Migrations\\20251008171703_FixPasswordColumnName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T17:17:03.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Controllers\\UsersController.cs",
               "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\UsersController.cs",
               "RelativeToolTip": "CodeDrawApi\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAgwEMAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T16:53:10.296Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CodeDrawApi\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CodeDrawApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T18:22:32.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\UserDTO.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\DTOs\\UserDTO.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\UserDTO.cs",
-              "RelativeToolTip": "CodeDrawApi\\DTOs\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "CodeDrawApi\\appsettings.Development.json",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\appsettings.Development.json",
+              "RelativeToolTip": "CodeDrawApi\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T18:22:23.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "CodeDrawApi\\Controllers\\TasksController.cs",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "CodeDrawApi\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCcAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:49:28.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T17:23:22.992Z"
             },
             {
               "$type": "Document",
@@ -228,144 +127,61 @@
               "RelativeDocumentMoniker": "CodeDrawApi\\Utils\\TokenService.cs",
               "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Utils\\TokenService.cs",
               "RelativeToolTip": "CodeDrawApi\\Utils\\TokenService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwC0AAABCAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T17:58:46.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T14:46:41.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SubmissionDTO.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\SubmissionDTO.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\DTOs\\SubmissionDTO.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\SubmissionDTO.cs",
-              "RelativeToolTip": "CodeDrawApi\\DTOs\\SubmissionDTO.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA9wBgAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "CodeDrawApi\\DTOs\\UserDTO.cs",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "CodeDrawApi\\DTOs\\UserDTO.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAlwDwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:52:24.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T14:32:43.603Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Models\\UserModel.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
-              "RelativeToolTip": "CodeDrawApi\\Models\\UserModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T01:13:45.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SubmissionsController.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\SubmissionsController.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Controllers\\SubmissionsController.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\SubmissionsController.cs",
-              "RelativeToolTip": "CodeDrawApi\\Controllers\\SubmissionsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:53:39.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TaskDTO.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\TaskDTO.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\DTOs\\TaskDTO.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\TaskDTO.cs",
-              "RelativeToolTip": "CodeDrawApi\\DTOs\\TaskDTO.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvyIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:51:51.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SubmissionRepository.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Repositores\\SubmissionRepository.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Repositores\\SubmissionRepository.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Repositores\\SubmissionRepository.cs",
-              "RelativeToolTip": "CodeDrawApi\\Repositores\\SubmissionRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:39:03.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TaskRepository.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Repositores\\TaskRepository.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Repositores\\TaskRepository.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Repositores\\TaskRepository.cs",
-              "RelativeToolTip": "CodeDrawApi\\Repositores\\TaskRepository.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAkwBsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:38:50.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Repositores\\UserRepository.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Repositores\\UserRepository.cs",
               "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Repositores\\UserRepository.cs",
               "RelativeToolTip": "CodeDrawApi\\Repositores\\UserRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwCQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:38:08.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T14:25:12.361Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "20251008163212_InitialModelWithGuids.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Migrations\\20251008163212_InitialModelWithGuids.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Migrations\\20251008163212_InitialModelWithGuids.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Migrations\\20251008163212_InitialModelWithGuids.cs",
-              "RelativeToolTip": "CodeDrawApi\\Migrations\\20251008163212_InitialModelWithGuids.cs",
+              "DocumentIndex": 10,
+              "Title": "20251110142430_TurmaAddUser.cs",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Migrations\\20251110142430_TurmaAddUser.cs",
+              "RelativeDocumentMoniker": "CodeDrawApi\\Migrations\\20251110142430_TurmaAddUser.cs",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Migrations\\20251110142430_TurmaAddUser.cs",
+              "RelativeToolTip": "CodeDrawApi\\Migrations\\20251110142430_TurmaAddUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:32:12.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T14:24:30.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DbContext.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Utils\\DbContext.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Utils\\DbContext.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Utils\\DbContext.cs",
-              "RelativeToolTip": "CodeDrawApi\\Utils\\DbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "CodeDrawApi\\Models\\UserModel.cs",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
+              "RelativeToolTip": "CodeDrawApi\\Models\\UserModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T16:00:03.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T14:04:41.34Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SubmissionModel.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\SubmissionModel.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Models\\SubmissionModel.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\SubmissionModel.cs",
-              "RelativeToolTip": "CodeDrawApi\\Models\\SubmissionModel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwB4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T14:49:16.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 8,
               "Title": "Roles.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Utils\\Roles.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Utils\\Roles.cs",
@@ -373,21 +189,7 @@
               "RelativeToolTip": "CodeDrawApi\\Utils\\Roles.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T14:35:39.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TaskModel.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\TaskModel.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Models\\TaskModel.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\TaskModel.cs",
-              "RelativeToolTip": "CodeDrawApi\\Models\\TaskModel.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T01:38:57.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T14:35:39.97Z"
             }
           ]
         }

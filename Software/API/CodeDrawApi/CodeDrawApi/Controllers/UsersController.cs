@@ -30,7 +30,8 @@ namespace CodeDrawApi.Controllers
                 Id = u.Id,
                 Name = u.Name,
                 Email = u.Email,
-                Role = u.Role
+                Role = u.Role,
+                Turma = u.Turma
             });
             return Ok(userDtos);
         }
@@ -62,8 +63,6 @@ namespace CodeDrawApi.Controllers
         [HttpPost]
         public async Task<ActionResult<UserResponseDto>> PostUser(CreateUserDto createUserDto)
         {
-            // IMPORTANTE: Aqui você deve implementar a lógica para hashear a senha!
-            // Exemplo: var passwordHash = BCrypt.Net.BCrypt.HashPassword(createUserDto.Password);
             var user = new UserModel
             {
                 Name = createUserDto.Name,
@@ -71,6 +70,12 @@ namespace CodeDrawApi.Controllers
                 Password = createUserDto.Password,
                 Role = Utils.Roles.Aluno
             };
+            var emailExiste = await _userRepository.GetByEmailAsync(user.Email);
+
+            if (emailExiste != null)
+            {
+                return Conflict(new { message = "O e-mail informado já está cadastrado." });
+            }
 
             await _userRepository.AddAsync(user);
             await _userRepository.SaveChangesAsync();
@@ -102,8 +107,47 @@ namespace CodeDrawApi.Controllers
             _userRepository.Update(user);
             await _userRepository.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(user);
         }
+
+        //PUT: api/users/turma/{id}
+        [HttpPut("turma/{id}")]
+        [Authorize(Policy = "AdminPolicy")]
+        public async Task<IActionResult> PutUserTurma(Guid id, UpdateTurmaUserDTO updateTurmaUserDTO)
+        {
+            var user = await _userRepository.GetByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.Turma = updateTurmaUserDTO.Turma;
+
+            _userRepository.Update(user);
+            await _userRepository.SaveChangesAsync();
+
+            return Ok(user);
+        }
+
+        //PUT: api/users/turma/{id}
+        [HttpPut("role/{id}")]
+        [Authorize(Policy = "AdminPolicy")]
+        public async Task<IActionResult> PutUserRole(Guid id, UpdateRoleUserDTO updateRoleUserDTO)
+        {
+            var user = await _userRepository.GetByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.Role = updateRoleUserDTO.Role;
+
+            _userRepository.Update(user);
+            await _userRepository.SaveChangesAsync();
+
+            return Ok(user);
+        }
+
 
         // DELETE: api/users/{id}
         [HttpDelete("{id}")]
@@ -119,7 +163,7 @@ namespace CodeDrawApi.Controllers
             _userRepository.Delete(user);
             await _userRepository.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(user);
         }
     }
 }

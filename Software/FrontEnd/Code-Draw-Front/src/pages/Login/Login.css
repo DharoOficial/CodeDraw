@@ -1,21 +1,51 @@
+
+
 /* Define o corpo da página com o fundo gradiente e centraliza o conteúdo */
-.login-body {
+.login-page {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #466781;
-    min-height: 100vh;
+
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 4rem;
+    width: 100%;
+    height: 100vh;
 }
 
-/* Estilo para o cabeçalho/logo, inspirado na sua navbar */
-.login-header {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 2rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+.login-panel-left{
+    width: 40%;   background: linear-gradient(135deg, #123c5e 0%, #0a2236 100%);
+   
+    height: 100%;
+    display: flex;
+    clip-path: polygon(0% 0%, 73% 0, 100% 29%, 54% 100%, 0% 100%);
+}
+
+.login-inputa label{
+    color: #fff;
+}
+
+.login-inputa{
+    margin-top: 1em;
+}
+
+.logo-text{
+    color: #fcfcfc;
+}
+.art-container p{
+    color: #fcfcfc;
+}
+
+.login-panel-right{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+}
+
+.art-container{
+    
+    margin: auto;
+    width: 80%;
 }
 
 .login-header span {
@@ -23,10 +53,10 @@
 }
 
 /* Container principal do formulário */
-.login-container {
-    max-width: 400px;
-    width: 100%;
+.login-form-container {
+    max-width: 55%;
     padding: 2rem;
+    margin: auto;
 }
 
 /* Cartão do formulário com sombra e bordas arredondadas */
@@ -38,12 +68,12 @@
 }
 
 /* Títulos dentro do cartão */
-.login-title {
+.form-title {
     margin-bottom: 0.5rem;
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
-    color: #123c5e;
+    color: #f1f1f1;
 }
 
 .login-subtitle {
@@ -71,6 +101,7 @@
 
 /* Estilo para o botão de submit, usando as cores do seu protótipo */
 .login-button {
+    margin-top: 1em;
     width: 100%;
     padding: 0.8rem 1rem;
     border: none;
@@ -107,10 +138,10 @@
     text-align: center;
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: #4b5563;
+    color: #fcfcfc;
 }
 
-.login-link a {
+.login-link a{
     color: #123c5e;
     font-weight: 600;
     text-decoration: none;
@@ -118,4 +149,16 @@
 
 .login-link a:hover {
     text-decoration: underline;
+}
+
+
+.forgot-password{
+    color: #123c5e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.forgot-password:hover{
+    text-decoration: underline;
+
 }

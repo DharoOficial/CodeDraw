@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './login.css';
 
 
-const API_BASE_URL = 'https://localhost:7123/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL
 
 export default function Login() {
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ export default function Login() {
         }
         setIsLoading(true);
         try {
-            const response = await fetch(`${API_BASE_URL}/auth/login`, {
+            const response = await fetch(`${API_BASE_URL}/Auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -36,9 +36,10 @@ export default function Login() {
             localStorage.setItem('authUser', JSON.stringify(data.user));
 
             // Navega para a página principal da aplicação
-            navigate('/home');
+            navigate('/');
         } catch (err) {
             setError(err.message);
+            console.log(error)
         } finally {
             setIsLoading(false);
         }
@@ -57,7 +58,7 @@ export default function Login() {
                     <form onSubmit={handleSubmit} noValidate>
                         <h2 className="form-title">Acessar a plataforma</h2>
 
-                        <div className="input-group">
+                        <div className="login-inputa">
                             <label htmlFor="email">E-MAIL</label>
                             <input
                                 id="email"
@@ -65,10 +66,11 @@ export default function Login() {
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                                 required
+                                className='login-input'
                             />
                         </div>
 
-                        <div className="input-group">
+                        <div className="login-inputa">
                             <label htmlFor="password">SENHA</label>
                             <input
                                 id="password"
@@ -76,17 +78,18 @@ export default function Login() {
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}
                                 required
+                                className='login-input'
                             />
                             <a href="#" className="forgot-password">Esqueci minha senha</a>
                         </div>
 
                         {error && <p className="error-message">{error}</p>}
 
-                        <button type="submit" disabled={isLoading} className="submit-button">
+                        <button type="submit" disabled={isLoading} className="login-button">
                             {isLoading ? 'ENTRANDO...' : 'ENTRAR'}
                         </button>
 
-                        <p className="signup-link">
+                        <p className="login-link">
                             Não tem uma conta? <Link to="/cadastro">Clique aqui!</Link>
                         </p>
                     </form>

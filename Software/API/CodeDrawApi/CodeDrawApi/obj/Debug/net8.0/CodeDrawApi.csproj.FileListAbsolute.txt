@@ -343,3 +343,4 @@ C:\Users\ErickBandeira-WAITS\Downloads\CodeDraw-master\CodeDraw-master\Software\
 C:\Users\ErickBandeira-WAITS\Downloads\CodeDraw-master\CodeDraw-master\Software\API\CodeDrawApi\CodeDrawApi\obj\Debug\net8.0\CodeDrawApi.pdb
 C:\Users\ErickBandeira-WAITS\Downloads\CodeDraw-master\CodeDraw-master\Software\API\CodeDrawApi\CodeDrawApi\obj\Debug\net8.0\CodeDrawApi.genruntimeconfig.cache
 C:\Users\ErickBandeira-WAITS\Downloads\CodeDraw-master\CodeDraw-master\Software\API\CodeDrawApi\CodeDrawApi\obj\Debug\net8.0\ref\CodeDrawApi.dll
+D:\Faculdade\TGI\Software\API\CodeDrawApi\CodeDrawApi\obj\Debug\net8.0\CodeDrawApi.sourcelink.json

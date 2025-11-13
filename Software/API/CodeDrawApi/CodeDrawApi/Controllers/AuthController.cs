@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CodeDrawApi.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly UserRepository _userRepository;

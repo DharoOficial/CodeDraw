@@ -1,0 +1,148 @@
+.HomeTarefas {
+    padding: 2em;
+    width: 75%;
+
+}
+
+.HomeAtualizarTask {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.HomeAtualizarTask:hover {
+    background-color: #1877cc;
+    transform: translateY(-2px);
+}
+
+.HomeAtualizarTask.loading {
+    pointer-events: none; /* evita clique durante o loading */
+    opacity: 0.85;
+}
+
+/* Spinner animado */
+.HomeAtualizarTask.loading::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.HomeMiniHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 0 0 3px #000;
+}
+
+.HomeTarefaTite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.json-key {
+    color: #2599ff;
+    text-shadow: 0 0 3px #2599ff75;
+    font-family: monospace;
+}
+
+.json-string {
+    color: #ecd41e;
+    text-shadow: 0 0 3px #ecd41e75;
+    font-family: monospace;
+}
+
+.json-boolean {
+    color: #ff4a3d;
+    text-shadow: 0 0 3px #ff4a3d75;
+    font-family: monospace;
+}
+
+.json-class {
+    color: #1eff00;
+    text-shadow: 0 0 3px #1eff0075;
+    font-family: monospace;
+}
+
+
+.HomeCardTask {
+    font-size: 1.2em;
+    font-family: monospace !important;
+    width: 30em;
+    height: 13em;
+    background-color: #1b1f23;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    border-left: 4px solid #58a6ff;
+    color: #fff;
+    margin: 1em;
+    border-radius: 10px;
+    padding: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.HomeTaskSection {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.HomeSepararBotao{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.HomeBotaoProg{
+    width: 8em;
+    height: 3em;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #b17b07 0%, #E79F07 100%);
+    border: none;
+    box-shadow: 0 0 3px #000;
+    transition: 0.12s ease-in-out;
+}
+
+
+.HomeBotaoProg:hover{
+    transform: scale(1.1);
+}
+
+.HomeTextBotaoProg{
+    text-decoration: solid;
+    color: #091e30;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+
+.HomeNumeroTarefas {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: monospace;
+}

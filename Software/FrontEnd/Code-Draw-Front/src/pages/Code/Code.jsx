@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Code.css'
 
 const Code = () => {
@@ -1074,14 +1075,14 @@ const Code = () => {
                       <block type="turn_direction">
                         <value name="ANGLE">
                           <shadow type="math_number">
-                            <field name="NUM">-90</field>
+                            <field name="NUM">90</field>
                           </shadow>
                         </value>
                         <next>
                           <block type="move_forward">
                             <value name="DISTANCE">
                               <shadow type="math_number">
-                                <field name="NUM">60</field>
+                                <field name="NUM">100</field>
                               </shadow>
                             </value>
                           </block>
@@ -1127,7 +1128,7 @@ const Code = () => {
   return (
     <>
       <div className="navbar">
-        <div className="logo">Code<span>Draw</span></div>
+        <div className="logo"><Link className='logo' to='/'> Code<span>Draw</span></Link></div>
         <div className="nav-controls">
           <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.9rem' }}>
             Programação Visual Educativa
