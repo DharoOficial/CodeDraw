@@ -6,24 +6,32 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home/Home.jsx';
 import Login from './pages/Login/Login.jsx';
 import Code from './pages/Code/Code.jsx';
+import Cadastro from './pages/Cadastro/Cadastro.jsx';
+import CadastroTask from './pages/CadastroTask/CadastroTask.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, // <== O App é o elemento principal
-    // errorElement: <ErrorPage />, // Boa prática: adicione uma página de erro
-    children: [ // <== As outras rotas são "filhas" dele e serão renderizadas no <Outlet />
+    element: <App />,
+
+    children: [
       {
         path: "/",
         element: <Home />,
       },
       {
-        path: "login", // Não precisa da "/" no início em rotas aninhadas
+        path: "login",
         element: <Login />,
       },
       {
-        path: "code", // Dica: por convenção, use caminhos em minúsculo
+        path: "code",
         element: <Code />,
+      },{
+        path: "cadastro",
+        element: <Cadastro/>,
+      },{
+        path: "CadastroTask",
+        element: <CadastroTask/>,
       },
     ],
   },

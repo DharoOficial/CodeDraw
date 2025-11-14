@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\models\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -39,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\utils\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|d:\\faculdade\\tgi\\software\\api\\codedrawapi\\codedrawapi\\migrations\\20251110142430_turmaadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94E0D343-606D-4C3A-9776-879DC0D58659}|CodeDrawApi\\CodeDrawApi.csproj|solutionrelative:codedrawapi\\migrations\\20251110142430_turmaadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -58,7 +62,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Program.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Program.cs",
@@ -71,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Controllers\\UsersController.cs",
@@ -85,6 +89,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\TaskModel.cs",
+              "RelativeDocumentMoniker": "CodeDrawApi\\Models\\TaskModel.cs",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\TaskModel.cs",
+              "RelativeToolTip": "CodeDrawApi\\Models\\TaskModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T19:07:20.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CodeDrawApi\\Properties\\launchSettings.json",
@@ -97,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "CodeDrawApi\\appsettings.Development.json",
@@ -109,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TasksController.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Controllers\\TasksController.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Controllers\\TasksController.cs",
@@ -121,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Utils\\TokenService.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Utils\\TokenService.cs",
@@ -133,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\DTOs\\UserDTO.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\DTOs\\UserDTO.cs",
@@ -145,7 +162,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "CodeDrawApi\\Models\\UserModel.cs",
+              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
+              "RelativeToolTip": "CodeDrawApi\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA9wB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:04:41.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Repositores\\UserRepository.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Repositores\\UserRepository.cs",
@@ -157,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "20251110142430_TurmaAddUser.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Migrations\\20251110142430_TurmaAddUser.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Migrations\\20251110142430_TurmaAddUser.cs",
@@ -169,19 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
-              "RelativeDocumentMoniker": "CodeDrawApi\\Models\\UserModel.cs",
-              "ToolTip": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Models\\UserModel.cs",
-              "RelativeToolTip": "CodeDrawApi\\Models\\UserModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T14:04:41.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Roles.cs",
               "DocumentMoniker": "D:\\Faculdade\\TGI\\Software\\API\\CodeDrawApi\\CodeDrawApi\\Utils\\Roles.cs",
               "RelativeDocumentMoniker": "CodeDrawApi\\Utils\\Roles.cs",

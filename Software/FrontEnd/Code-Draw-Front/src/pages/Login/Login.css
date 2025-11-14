@@ -24,7 +24,11 @@
 }
 
 .login-inputa{
-    margin-top: 1em;
+    margin-top: .6em;
+}
+
+.login-inputa input{
+    margin:.3em 0;
 }
 
 .logo-text{
@@ -142,7 +146,7 @@
 }
 
 .login-link a{
-    color: #123c5e;
+    color: #0a2033;
     font-weight: 600;
     text-decoration: none;
 }
@@ -153,7 +157,7 @@
 
 
 .forgot-password{
-    color: #123c5e;
+    color: #0a2033;
     font-weight: 600;
     text-decoration: none;
 }

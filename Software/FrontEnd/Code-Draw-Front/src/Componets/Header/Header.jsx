@@ -1,7 +1,7 @@
 import { jwtDecode } from 'jwt-decode';
 import './Header.css'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Header() {
 
@@ -9,6 +9,12 @@ export default function Header() {
     const decodedToken = jwtDecode(token);
     const [user, setUser] = useState(decodedToken)
     console.log(decodedToken)
+     const navigate = useNavigate();
+
+    function Deslogar(){
+        localStorage.removeItem('authToken');
+        navigate('/login');
+    }
 
     return (
         <div className="header-container-side">
@@ -22,7 +28,7 @@ export default function Header() {
                         {user.role === "Admin" ?
                             (<>
                                 <h2>Portal administrativo:</h2><b>
-                                    <Link to="/create-task" className='linkHeaderH'>Criar Tarefa</Link>
+                                    <Link to="/CadastroTask" className='linkHeaderH'>Criar Tarefa</Link>
                                     <Link to="/ManagerUsers" className='linkHeaderH'>Gerenciar Usuários</Link>
                                 </b>
                             </>)
@@ -31,16 +37,22 @@ export default function Header() {
                                 (<>
                                     <b>
                                         <h2>Portal do Professor:</h2>
-                                        <Link to="/create-task" className='linkHeaderH'>Criar Tarefa</Link>
+                                        <Link to="/CadastroTask" className='linkHeaderH'>Criar Tarefa</Link>
                                     </b>
                                 </>) :
                                 // Painel Usuario
                                 (<>
                                     <b>
-                                        <Link to="/create-task" className='linkHeaderH'></Link>
+                                        <h2>Portal do Aluno:</h2>
+                                        <Link to="/code" className='linkHeaderH'>Programar</Link>
                                     </b>
                                 </>)
                         }
+                    </div>
+                    <div className="HeaderLogOffBox"onClick={Deslogar}>
+
+                        <span className='HeaderLogOff' ></span>
+                        <p>Sair</p>
                     </div>
                 </div>
             ) :

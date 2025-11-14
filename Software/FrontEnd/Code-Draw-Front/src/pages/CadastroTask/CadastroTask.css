@@ -1,0 +1,231 @@
+/* Container principal da página */
+.criar-tarefa-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #123c5e 0%, #0a2236 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Container do formulário */
+.criar-tarefa-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    padding: 3rem;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header da página */
+.criar-tarefa-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1.5rem;
+}
+
+.criar-tarefa-header h1 {
+    font-size: 2rem;
+    color: #123c5e;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.criar-tarefa-header p {
+    color: #6b7280;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Formulário */
+.criar-tarefa-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Grupos de formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #123c5e;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* Inputs e textarea */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    background-color: #fff;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #E79F07;
+    box-shadow: 0 0 0 3px rgba(231, 159, 7, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.6;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Texto auxiliar */
+.helper-text {
+    color: #6b7280;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Mensagem de erro */
+.error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Ações do formulário */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+/* Botões */
+.btn-cancel,
+.btn-submit {
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.btn-cancel {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 2px solid #d1d5db;
+}
+
+.btn-cancel:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #E79F07 0%, #946604 100%);
+    color: white;
+    min-width: 150px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 159, 7, 0.4);
+}
+
+.btn-cancel:disabled,
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .criar-tarefa-page {
+        padding: 1rem;
+    }
+
+    .criar-tarefa-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .criar-tarefa-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .criar-tarefa-header p {
+        font-size: 0.9rem;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-cancel,
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .criar-tarefa-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .criar-tarefa-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-cancel,
+    .btn-submit {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}

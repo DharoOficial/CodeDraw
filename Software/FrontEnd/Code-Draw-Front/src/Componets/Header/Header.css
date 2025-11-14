@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 60%;
+    height: 100%;
     width: 80%;
     margin: auto;
 }
@@ -41,8 +41,10 @@
     text-decoration: none;
     color: #091e30;
     background: linear-gradient(135deg, #b17b07 0%, #E79F07 100%);
-    padding: 0.3em 3em;
     border-radius: 10px;
+    padding: .4em 0;
+    align-items: center;
+    text-align: center;
     box-shadow: inset 3px 3px 15px -10px #fffa,
         inset -5px -5px 15px -10px #000,
         5px 5px 10px -10px #000;
@@ -63,4 +65,34 @@
 .NomeHeader {
     font-size: 1.5em !important;
     color: #fff;
+}
+
+.HeaderLogOff {
+    clip-path: polygon(76% 40%, 81% 43%, 84% 48%, 81% 54%, 76% 56%, 30% 56%, 30% 73%, 0 50%, 30% 24%, 30% 40%);
+    height: 6em;
+    background: #E79F07;
+    width: 6em;
+    height: 6em;
+    margin: 0 auto;
+    transition: 0.1s ease-in-out;
+}
+
+.HeaderLogOff:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.HeaderLogOffBox {
+    width: 36%;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.HeaderLogOffBox p {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: -.6em;
 }

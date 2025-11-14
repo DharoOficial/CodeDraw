@@ -5,8 +5,8 @@
 }
 
 .HomeAtualizarTask {
-    background-color: #1e90ff;
-    color: #fff;
+    background: linear-gradient(135deg, #E79F07 0%, #946604 100%);
+    color: #000000;
     padding: 10px 22px;
     border: none;
     border-radius: 8px;
@@ -20,8 +20,8 @@
     position: relative;
 }
 
-.HomeAtualizarTask:hover {
-    background-color: #1877cc;
+.HomeAtualizarTask:hover {    
+    background: linear-gradient(135deg, #E79F07 0%, #946604 100%);
     transform: translateY(-2px);
 }
 

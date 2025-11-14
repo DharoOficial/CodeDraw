@@ -33,7 +33,6 @@ export default function Login() {
 
             // Salva o token e os dados do usuário no localStorage
             localStorage.setItem('authToken', data.token);
-            localStorage.setItem('authUser', JSON.stringify(data.user));
 
             // Navega para a página principal da aplicação
             navigate('/');
